@@ -1,0 +1,15 @@
+[Unit]
+
+Description=Prometheus exporter for systemd metrics, written in Go with pluggable metric collectors.
+Documentation=https://github.com/prometheus/node_exporter
+After=network.target
+
+
+[Service]
+User=root
+ExecStart=/usr/bin/systemd_exporter
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target
