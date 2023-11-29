@@ -5,12 +5,9 @@ After=network-online.target
 
 [Service]
 User=root
-ExecStart=/usr/local/bin/node_exporter $NODE_EXPORTER_OPTS
+ExecStart=/usr/local/bin/node_exporter --collector.systemd
 Restart=on-failure
 RestartSec=5s
 
 [Install]
 WantedBy=default.target
-
-
-NODE_EXPORTER_OPTS="--collector.systemd"
