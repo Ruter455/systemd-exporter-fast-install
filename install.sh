@@ -5,6 +5,6 @@ tar -xvf node_exporter*.tar.gz
 cd  node_exporter*/
 sudo cp node_exporter /usr/local/bin
 
-sudo cp ./nodeexporter.service /etc/systemd/system
+cp ./nodeexporter.service /etc/systemd/system
 sudo systemctl enable nodeexporter
 sudo systemctl start nodeexporter
