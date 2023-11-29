@@ -1,0 +1,16 @@
+[Unit]
+Description=Node Exporter
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+User=root
+ExecStart=/usr/local/bin/node_exporter $NODE_EXPORTER_OPTS
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=default.target
+
+
+NODE_EXPORTER_OPTS="--collector.systemd"
