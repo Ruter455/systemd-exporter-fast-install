@@ -6,5 +6,5 @@ cd  node_exporter*/
 sudo cp node_exporter /usr/local/bin
 
 sudo cp nodeexporter.service /etc/systemd/system
-sudo systemctl enable systemdexporter
-sudo systemctl start systemdexporter
+sudo systemctl enable nodeexporter
+sudo systemctl start nodeexporter
